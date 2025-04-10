@@ -6,7 +6,7 @@ import seaborn as sns
 # ----------------------------------------
 # 1. Load and Clean the Dataset
 # ----------------------------------------
-df = pd.read_csv("C:\\Users\\rajde\\Desktop\\vit_vellore_students_with_branch.csv")
+df = pd.read_csv("C:/Users/rajde/Desktop/dataset.csv")
 
 # Clean column names (lowercase, strip spaces)
 df.columns = df.columns.str.strip().str.lower()
@@ -16,6 +16,44 @@ print("Dataset Info:")
 print(df.info())
 print("\nFirst 5 rows:")
 print(df.head())
+
+# ----------------------------------------
+# 1A. Exploratory Data Analysis (EDA)
+# ----------------------------------------
+
+# Shape of the dataset
+print(f"\nDataset contains {df.shape[0]} rows and {df.shape[1]} columns.\n")
+
+# Summary statistics
+print("Summary statistics:")
+print(df.describe(include='all'))
+
+# Check for missing values
+print("\nMissing values in each column:")
+print(df.isnull().sum())
+
+# Check unique values in categorical columns
+print("\nUnique values in 'branch' and 'year':")
+print("Branches:", df['branch'].unique())
+print("Years:", df['year'].unique())
+
+# Countplot of students per year
+plt.figure(figsize=(8, 4))
+sns.countplot(x='year', data=df, palette='Set2')
+plt.title("Number of Students per Year")
+plt.xlabel("Academic Year")
+plt.ylabel("Count")
+plt.tight_layout()
+plt.show()
+
+# Countplot of students per branch
+plt.figure(figsize=(10, 4))
+sns.countplot(y='branch', data=df, palette='Set3', order=df['branch'].value_counts().index)
+plt.title("Number of Students per Branch")
+plt.xlabel("Count")
+plt.ylabel("Branch")
+plt.tight_layout()
+plt.show()
 
 # ----------------------------------------
 # 2. Data Cleansing
