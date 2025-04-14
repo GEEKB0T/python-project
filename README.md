@@ -6,7 +6,7 @@ Data Cleaning & Preprocessing using Pandas and NumPy
 
 Exploratory Data Analysis (EDA) to uncover patterns in student CGPAs
 
-Visualizations with Matplotlib and Seaborn to represent trends and outliers
+Visualizations with Matplotlib and Seaborn to represent trends and outlies
 
 Branch-wise and Year-wise Analysis to compare performance across departments
 
