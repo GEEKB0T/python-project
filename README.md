@@ -2,7 +2,7 @@
 This project explores academic performance trends among students at VIT Vellore using Python-based data analysis techniques. The aim is to gain insights into CGPA distributions across different departments and academic years, identify top-performing branches, visualize overall student performance, and detect anomalies in the data.
 
 🔍 Key Features:
-Data Cleaning & Preprocessing using Pandas and NumPy
+Data Cleaning & Preprocessing using Pandas and NumP
 
 Exploratory Data Analysis (EDA) to uncover patterns in student CGPAs
 
